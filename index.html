@@ -19,7 +19,7 @@ html{scroll-behavior:smooth;}
 body{font-family:'Noto Serif TC',serif;font-size:18px;line-height:1.85;
   background:var(--cream);color:var(--ink);overflow-x:hidden;}
 
-/* NAV */
+/* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:22px 60px;
   display:flex;justify-content:space-between;align-items:center;transition:all 0.4s;}
 nav.scrolled{background:rgba(248,242,233,0.97);backdrop-filter:blur(16px);
@@ -35,40 +35,38 @@ nav.scrolled .nav-logo span{color:var(--terra);}
 nav.scrolled .nav-links a{color:var(--ink-soft);}
 .nav-links a:hover{color:var(--gold)!important;}
 .nav-cta-btn{background:var(--terra)!important;color:#fff!important;
-  padding:9px 22px;border-radius:2px;cursor:pointer;}
+  padding:9px 22px;border-radius:2px;cursor:pointer;transition:background 0.3s!important;}
 .nav-cta-btn:hover{background:var(--terra-light)!important;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;
   background:none;border:none;padding:4px;}
-.hamburger span{width:26px;height:1.5px;background:var(--cream);
-  transition:all 0.3s;display:block;}
+.hamburger span{width:26px;height:1.5px;background:var(--cream);transition:all 0.3s;display:block;}
 nav.scrolled .hamburger span{background:var(--forest);}
 
-/* HERO */
+/* ── HERO ── */
 #hero{height:100vh;min-height:700px;position:relative;overflow:hidden;
   display:flex;align-items:center;}
 .hero-bg-photo{position:absolute;inset:0;}
-.hero-bg-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;
-  transition:transform 0.1s linear;}
+.hero-bg-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
 .hero-bg-photo::after{content:'';position:absolute;inset:0;
-  background:linear-gradient(to right,rgba(22,38,29,0.90) 0%,rgba(22,38,29,0.68) 52%,rgba(22,38,29,0.22) 100%);}
-.hero-content{position:relative;z-index:2;padding:0 60px;max-width:680px;
+  background:linear-gradient(to right,rgba(22,38,29,0.92) 0%,rgba(22,38,29,0.70) 52%,rgba(22,38,29,0.25) 100%);}
+.hero-content{position:relative;z-index:2;padding:0 60px;max-width:720px;
   opacity:0;transform:translateY(30px);animation:fadeUp 0.9s 0.3s ease forwards;}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
 .hero-tag{display:inline-flex;align-items:center;gap:12px;font-size:12px;
   letter-spacing:0.28em;color:var(--gold-light);margin-bottom:28px;
   text-transform:uppercase;font-weight:600;}
 .hero-tag::before{content:'';width:40px;height:1px;background:var(--gold);}
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,3.8vw,3.2rem);
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.4vw,2.9rem);
   line-height:1.3;color:var(--cream);font-weight:700;margin-bottom:24px;}
 .hero-h1 .accent{color:var(--gold-light);}
+.hero-colon{color:rgba(248,242,233,0.5);}
 .hero-sub{font-size:18px;color:rgba(248,242,233,0.82);line-height:2;
-  margin-bottom:44px;font-weight:300;max-width:540px;}
+  margin-bottom:44px;font-weight:300;max-width:580px;}
 .hero-sub strong{color:var(--gold-light);font-weight:600;}
 .btn-primary{display:inline-flex;align-items:center;gap:10px;
   background:var(--terra);color:#fff;padding:18px 36px;font-size:18px;
   letter-spacing:0.08em;border-radius:2px;border:none;cursor:pointer;
-  font-family:'Noto Serif TC',serif;font-weight:500;text-decoration:none;
-  transition:all 0.3s;}
+  font-family:'Noto Serif TC',serif;font-weight:500;text-decoration:none;transition:all 0.3s;}
 .btn-primary:hover{background:var(--terra-light);transform:translateY(-2px);
   box-shadow:0 14px 44px rgba(184,115,58,0.4);}
 .btn-primary .arrow{transition:transform 0.3s;}
@@ -77,8 +75,7 @@ nav.scrolled .hamburger span{background:var(--forest);}
   border-top:1px solid rgba(248,242,233,0.15);flex-wrap:wrap;}
 .stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;
   color:var(--gold-light);line-height:1;}
-.stat-label{font-size:15px;color:rgba(248,242,233,0.55);
-  margin-top:5px;letter-spacing:0.06em;}
+.stat-label{font-size:15px;color:rgba(248,242,233,0.55);margin-top:5px;letter-spacing:0.06em;}
 .scroll-down{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
   z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;
   color:rgba(248,242,233,0.4);font-size:11px;letter-spacing:0.2em;
@@ -90,22 +87,21 @@ nav.scrolled .hamburger span{background:var(--forest);}
 .hero-deco{position:absolute;top:40px;right:40px;z-index:3;width:80px;height:80px;
   border-top:1px solid rgba(201,169,110,0.35);border-right:1px solid rgba(201,169,110,0.35);}
 
-/* SHARED */
+/* ── SHARED ── */
 section{padding:110px 60px;}
 .inner{max-width:1100px;margin:0 auto;}
 .section-label{display:inline-flex;align-items:center;gap:12px;font-size:12px;
   letter-spacing:0.28em;color:var(--terra);text-transform:uppercase;
   margin-bottom:18px;font-weight:700;}
 .section-label::before{content:'';width:28px;height:1px;background:var(--terra);}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.2vw,2.6rem);
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3vw,2.5rem);
   line-height:1.35;color:var(--forest);font-weight:700;margin-bottom:14px;}
 .section-title .accent{color:var(--terra);}
-.section-sub{font-size:18px;color:var(--ink-soft);line-height:1.95;font-weight:300;max-width:640px;}
-.reveal{opacity:0;transform:translateY(24px);
-  transition:opacity 0.7s ease,transform 0.7s ease;}
+.section-sub{font-size:18px;color:var(--ink-soft);line-height:1.95;font-weight:300;max-width:680px;}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
-/* PAIN */
+/* ── PAIN ── */
 #pain{background:var(--paper);position:relative;overflow:hidden;}
 #pain::before{content:'？';position:absolute;top:-60px;right:-20px;
   font-family:'Playfair Display',serif;font-size:28rem;line-height:1;
@@ -121,15 +117,15 @@ section{padding:110px 60px;}
   transition:transform 0.4s ease;}
 .pain-card:hover::after{transform:scaleX(1);}
 .pain-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:700;
-  line-height:1;color:var(--cream-dark);position:absolute;top:16px;right:24px;
-  transition:color 0.35s;}
+  line-height:1;color:var(--cream-dark);position:absolute;top:16px;right:24px;transition:color 0.35s;}
 .pain-card:hover .pain-num{color:rgba(184,115,58,0.12);}
 .pain-icon{font-size:1.8rem;margin-bottom:16px;}
-.pain-title{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;
+.pain-title{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;
   color:var(--forest);margin-bottom:12px;}
+.pain-title .kw{color:var(--terra);}
 .pain-desc{font-size:18px;line-height:1.95;color:var(--ink-soft);font-weight:300;}
 
-/* BOOKS MARQUEE */
+/* ── BOOKS MARQUEE ── */
 #books{background:var(--forest);padding:80px 0;overflow:hidden;}
 .books-label{text-align:center;margin-bottom:52px;padding:0 20px;}
 .books-label .section-label{color:var(--gold);justify-content:center;}
@@ -147,202 +143,174 @@ section{padding:110px 60px;}
 .marquee-track:hover{animation-play-state:paused;}
 @keyframes marquee-scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
 .book-card{width:180px;flex-shrink:0;}
-.book-cover{width:100%;aspect-ratio:3/4.3;object-fit:cover;display:block;
-  border-radius:2px;box-shadow:4px 8px 24px rgba(0,0,0,0.45);
-  transition:transform 0.4s ease,box-shadow 0.4s ease,filter 0.4s;filter:saturate(0.88);}
+.book-cover{width:100%;aspect-ratio:3/4.3;object-fit:contain;display:block;
+  filter:drop-shadow(3px 8px 16px rgba(0,0,0,0.55));
+  transition:transform 0.4s ease,filter 0.4s;}
 .book-card:hover .book-cover{transform:translateY(-10px) scale(1.04);
-  box-shadow:6px 20px 44px rgba(0,0,0,0.55);filter:saturate(1.05);}
+  filter:drop-shadow(4px 14px 28px rgba(0,0,0,0.65));}
 .book-card-label{margin-top:12px;font-size:13px;color:rgba(248,242,233,0.55);
   text-align:center;line-height:1.5;letter-spacing:0.03em;}
 
-/* ABOUT */
+/* ── ABOUT ── */
 #about{background:var(--forest);position:relative;overflow:hidden;}
 .about-circle{position:absolute;border-radius:50%;
   border:1px solid rgba(201,169,110,0.07);pointer-events:none;}
 .about-circle:nth-child(1){width:700px;height:700px;top:-200px;right:-200px;}
 .about-circle:nth-child(2){width:400px;height:400px;bottom:-150px;left:-100px;}
-.about-grid{display:grid;grid-template-columns:5fr 6fr;gap:80px;
-  align-items:center;position:relative;z-index:1;}
+.about-grid{display:grid;grid-template-columns:5fr 7fr;gap:72px;
+  align-items:start;position:relative;z-index:1;}
 .about-photo-wrap{position:relative;}
 .photo-frame{position:relative;padding:14px 14px 56px 14px;
   border:1px solid rgba(201,169,110,0.2);background:rgba(255,255,255,0.03);}
-.photo-frame img{width:100%;display:block;aspect-ratio:3/4;object-fit:cover;
-  object-position:center top;filter:saturate(0.82) contrast(1.04);}
+.photo-frame img{width:100%;display:block;aspect-ratio:3/4;object-fit:contain;
+  object-position:center top;background:var(--cream);}
 .photo-caption{position:absolute;bottom:14px;left:28px;
   font-family:'Dancing Script',cursive;font-size:1.2rem;color:var(--gold);}
 .photo-badge{position:absolute;top:-18px;right:-18px;width:80px;height:80px;
   background:var(--terra);border-radius:50%;display:flex;flex-direction:column;
   align-items:center;justify-content:center;text-align:center;
   box-shadow:0 8px 24px rgba(184,115,58,0.4);}
-.badge-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;
-  color:#fff;line-height:1;}
+.badge-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff;line-height:1;}
 .badge-label{font-size:11px;letter-spacing:0.08em;color:rgba(255,255,255,0.85);}
 .about-content .section-label{color:var(--gold);}
 .about-content .section-label::before{background:var(--gold);}
 .about-content .section-title{color:var(--cream);}
 .about-content .section-title .accent{color:var(--gold-light);}
 .about-bio{font-size:18px;color:rgba(248,242,233,0.78);line-height:2;
-  font-weight:300;margin-top:20px;margin-bottom:28px;}
+  font-weight:300;margin-top:20px;margin-bottom:22px;}
 .about-bio strong{color:var(--gold-light);font-weight:600;}
 .about-quote{border-left:2px solid var(--gold);padding:18px 24px;
-  background:rgba(201,169,110,0.07);margin-bottom:32px;}
+  background:rgba(201,169,110,0.07);margin:28px 0;}
 .about-quote p{font-family:'Playfair Display',serif;font-size:18px;
-  font-weight:600;color:rgba(248,242,233,0.88);line-height:1.85;}
+  font-weight:600;color:rgba(248,242,233,0.92);line-height:1.85;}
 .about-sig{font-family:'Dancing Script',cursive;font-size:2.2rem;color:var(--gold);
-  margin-top:28px;display:block;}
-.about-metrics{display:flex;gap:36px;flex-wrap:wrap;margin-top:36px;
-  padding-top:32px;border-top:1px solid rgba(201,169,110,0.15);}
+  margin-top:24px;display:block;}
+.about-metrics{display:flex;gap:36px;flex-wrap:wrap;margin-top:32px;
+  padding-top:28px;border-top:1px solid rgba(201,169,110,0.15);}
 .metric-num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;
   color:var(--gold-light);line-height:1;}
-.metric-label{font-size:15px;color:rgba(248,242,233,0.5);
-  margin-top:4px;letter-spacing:0.06em;}
+.metric-label{font-size:15px;color:rgba(248,242,233,0.5);margin-top:4px;letter-spacing:0.06em;}
+.about-exp-list{list-style:none;margin:18px 0 0;}
+.about-exp-list li{font-size:17px;color:rgba(248,242,233,0.72);
+  padding:6px 0;border-bottom:1px solid rgba(201,169,110,0.1);
+  display:flex;align-items:flex-start;gap:10px;font-weight:300;line-height:1.7;}
+.about-exp-list li:last-child{border-bottom:none;}
+.about-exp-list li::before{content:'▸';color:var(--gold);font-size:0.8rem;
+  margin-top:4px;flex-shrink:0;}
 
-/* SERVICES */
+/* ── SERVICES ── */
 #services{background:var(--paper);}
 .services-header{margin-bottom:70px;text-align:center;}
 .services-header .section-label{justify-content:center;}
-.services-header .section-sub{margin:16px auto 0;text-align:center;}
-.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.services-header .section-sub{margin:16px auto 0;text-align:center;max-width:700px;}
+.plans-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;}
 .plan-card{background:var(--cream);border:1px solid var(--cream-dark);
-  padding:44px 36px;position:relative;overflow:hidden;
+  padding:48px 40px;position:relative;overflow:hidden;
   transition:transform 0.35s,box-shadow 0.35s;display:flex;flex-direction:column;}
 .plan-card:hover{transform:translateY(-8px);box-shadow:0 24px 64px var(--shadow);}
-.plan-card.featured{background:var(--forest);border-color:var(--forest);transform:scale(1.03);}
-.plan-card.featured:hover{transform:scale(1.03) translateY(-8px);}
-.plan-badge{position:absolute;top:0;right:24px;background:var(--terra);color:#fff;
-  font-size:12px;letter-spacing:0.15em;padding:6px 14px;
-  text-transform:uppercase;font-weight:700;}
-.plan-letter{font-size:15px;letter-spacing:0.2em;color:var(--terra);
+.plan-card.featured{background:var(--forest);border-color:var(--forest);}
+.plan-card.featured:hover{transform:translateY(-8px);}
+.plan-badge{position:absolute;top:0;right:28px;background:var(--terra);color:#fff;
+  font-size:12px;letter-spacing:0.15em;padding:6px 14px;text-transform:uppercase;font-weight:700;}
+.plan-letter{font-size:12px;letter-spacing:0.25em;color:var(--terra);
   text-transform:uppercase;margin-bottom:10px;font-weight:700;}
 .plan-card.featured .plan-letter{color:var(--gold);}
-.plan-name{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;
+.plan-tagline{font-size:15px;color:var(--sage);margin-bottom:8px;font-weight:400;}
+.plan-card.featured .plan-tagline{color:rgba(248,242,233,0.55);}
+.plan-name{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;
   color:var(--forest);margin-bottom:6px;}
 .plan-card.featured .plan-name{color:var(--cream);}
-.plan-desc{font-size:15px;color:var(--sage);letter-spacing:0.04em;margin-bottom:28px;}
-.plan-card.featured .plan-desc{color:rgba(248,242,233,0.55);}
-.plan-divider{height:1px;background:var(--cream-dark);margin-bottom:28px;}
-.plan-card.featured .plan-divider{background:rgba(255,255,255,0.1);}
+.plan-hook{font-size:17px;color:var(--ink-soft);line-height:1.7;
+  margin-bottom:24px;padding-bottom:24px;
+  border-bottom:1px solid var(--cream-dark);}
+.plan-card.featured .plan-hook{color:rgba(248,242,233,0.72);border-color:rgba(255,255,255,0.1);}
+.plan-intro{font-size:17px;color:var(--ink-soft);line-height:1.85;
+  font-weight:300;margin-bottom:24px;}
+.plan-card.featured .plan-intro{color:rgba(248,242,233,0.72);}
+.plan-kv-title{font-size:14px;letter-spacing:0.15em;color:var(--terra);
+  text-transform:uppercase;font-weight:700;margin-bottom:14px;}
+.plan-card.featured .plan-kv-title{color:var(--gold);}
 .plan-features{list-style:none;flex:1;margin-bottom:36px;}
 .plan-features li{display:flex;align-items:flex-start;gap:10px;
-  font-size:18px;line-height:1.75;color:var(--ink-soft);
-  padding:9px 0;border-bottom:1px dashed rgba(0,0,0,0.07);}
-.plan-card.featured .plan-features li{color:rgba(248,242,233,0.82);
-  border-color:rgba(255,255,255,0.08);}
+  font-size:17px;line-height:1.75;color:var(--ink-soft);
+  padding:10px 0;border-bottom:1px dashed rgba(0,0,0,0.07);}
+.plan-card.featured .plan-features li{color:rgba(248,242,233,0.82);border-color:rgba(255,255,255,0.08);}
 .plan-features li:last-child{border-bottom:none;}
-.check{color:var(--sage);font-size:0.9rem;margin-top:3px;flex-shrink:0;}
+.plan-features li .feat-title{font-weight:600;color:var(--forest);}
+.plan-card.featured .plan-features li .feat-title{color:var(--gold-light);}
+.check{color:var(--sage);font-size:0.85rem;margin-top:4px;flex-shrink:0;}
 .plan-card.featured .check{color:var(--gold);}
-.plan-price{margin-bottom:28px;}
-.price-amount{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;
+.plan-price{margin-bottom:28px;padding-top:20px;border-top:1px solid var(--cream-dark);}
+.plan-card.featured .plan-price{border-color:rgba(255,255,255,0.1);}
+.price-amount{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;
   color:var(--forest);line-height:1;}
 .plan-card.featured .price-amount{color:var(--gold-light);}
 .price-unit{font-size:15px;color:var(--sage);margin-left:4px;}
-.btn-plan{display:block;text-align:center;padding:15px;font-size:18px;
+.btn-plan{display:block;text-align:center;padding:16px;font-size:18px;
   letter-spacing:0.08em;border-radius:2px;border:1.5px solid var(--forest);
   color:var(--forest);cursor:pointer;background:transparent;
-  font-family:'Noto Serif TC',serif;font-weight:500;
-  transition:all 0.3s;text-decoration:none;}
+  font-family:'Noto Serif TC',serif;font-weight:500;transition:all 0.3s;text-decoration:none;}
 .btn-plan:hover{background:var(--forest);color:var(--cream);}
 .btn-plan.btn-plan-primary{background:var(--terra);border-color:var(--terra);color:#fff;}
 .btn-plan.btn-plan-primary:hover{background:var(--terra-light);border-color:var(--terra-light);}
 
-/* DELIVERABLE */
-#deliverable{background:var(--cream);}
-.del-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.report-mock{background:var(--paper);border:1px solid var(--cream-dark);
-  padding:36px;box-shadow:8px 12px 40px var(--shadow);position:relative;}
-.report-mock::before{content:'';position:absolute;top:-6px;left:12px;right:12px;
-  height:6px;background:var(--forest);}
-.report-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;}
-.report-doc-title{font-family:'Playfair Display',serif;font-size:1.05rem;
-  font-weight:700;color:var(--forest);}
-.report-subtitle{font-size:12px;color:var(--sage);letter-spacing:0.12em;margin-top:3px;}
-.report-logo{font-family:'Dancing Script',cursive;font-size:1.4rem;color:var(--terra);}
-.report-bar{height:3px;background:linear-gradient(to right,var(--terra),var(--gold),var(--sage));
-  margin-bottom:24px;}
-.report-section{margin-bottom:22px;}
-.report-section-title{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
-  color:var(--sage);margin-bottom:10px;font-weight:700;}
-.report-chart{display:flex;gap:8px;align-items:flex-end;height:60px;}
-.chart-bar{flex:1;border-radius:2px 2px 0 0;background:var(--terra);opacity:0.7;
-  animation:grow-bar 1.5s ease-out forwards;transform-origin:bottom;}
-@keyframes grow-bar{from{transform:scaleY(0);opacity:0;}to{transform:scaleY(1);opacity:0.7;}}
-.chart-bar:nth-child(1){height:40%;animation-delay:0.1s;}
-.chart-bar:nth-child(2){height:70%;animation-delay:0.2s;background:var(--gold);}
-.chart-bar:nth-child(3){height:55%;animation-delay:0.3s;}
-.chart-bar:nth-child(4){height:85%;animation-delay:0.4s;background:var(--forest-light);}
-.chart-bar:nth-child(5){height:60%;animation-delay:0.5s;}
-.report-tags{display:flex;gap:6px;flex-wrap:wrap;}
-.report-tag{padding:4px 10px;background:var(--cream-dark);font-size:12px;
-  color:var(--ink-soft);border-radius:2px;letter-spacing:0.05em;}
-.report-blurred{filter:blur(4px);pointer-events:none;user-select:none;}
-.report-seal{position:absolute;bottom:24px;right:24px;width:64px;height:64px;
-  border:1.5px solid var(--terra);border-radius:50%;display:flex;
-  align-items:center;justify-content:center;font-family:'Dancing Script',cursive;
-  font-size:1.1rem;color:var(--terra);opacity:0.7;}
-.del-features{list-style:none;}
-.del-features li{display:flex;align-items:flex-start;gap:16px;
-  padding:18px 0;border-bottom:1px solid var(--cream-dark);}
-.del-features li:last-child{border-bottom:none;}
-.del-icon{width:42px;height:42px;flex-shrink:0;background:var(--forest);
-  border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;color:var(--gold-light);}
-.del-text-title{font-family:'Playfair Display',serif;font-size:1.05rem;
-  font-weight:700;color:var(--forest);margin-bottom:4px;}
-.del-text-desc{font-size:18px;color:var(--ink-soft);line-height:1.8;font-weight:300;}
+/* ── DISCLAIMER ── */
+#disclaimer{background:var(--cream-dark);padding:48px 60px;}
+.disclaimer-inner{max-width:860px;margin:0 auto;
+  display:flex;align-items:flex-start;gap:20px;}
+.disclaimer-icon{font-size:1.4rem;flex-shrink:0;margin-top:2px;}
+.disclaimer-text{font-size:15px;color:var(--ink-soft);line-height:1.9;font-weight:300;}
+.disclaimer-text strong{font-weight:600;color:var(--forest);}
 
-/* TESTIMONIAL */
+/* ── TESTIMONIAL ── */
 #testimonial{background:linear-gradient(135deg,var(--forest) 0%,#1A2E25 100%);padding:90px 60px;}
 .testimonial-inner{max-width:900px;margin:0 auto;text-align:center;}
 .big-quote{font-family:'Playfair Display',serif;font-size:6rem;line-height:0.6;
   color:var(--gold);opacity:0.4;display:block;margin-bottom:16px;}
 .testimonial-text{font-family:'Playfair Display',serif;
-  font-size:clamp(1.25rem,2.2vw,1.65rem);font-weight:700;
+  font-size:clamp(1.2rem,2.2vw,1.6rem);font-weight:700;
   color:var(--cream);line-height:1.8;margin-bottom:36px;}
-.testimonial-author{font-size:15px;letter-spacing:0.2em;
-  color:var(--gold);text-transform:uppercase;font-weight:500;}
+.testimonial-author{font-size:15px;letter-spacing:0.2em;color:var(--gold);
+  text-transform:uppercase;font-weight:500;}
 
-/* FAQ */
+/* ── FAQ ── */
 #faq{background:var(--paper);}
-.faq-inner{max-width:800px;margin:0 auto;}
+.faq-inner{max-width:860px;margin:0 auto;}
 .faq-header{margin-bottom:60px;}
 .faq-item{border-bottom:1px solid var(--cream-dark);overflow:hidden;}
 .faq-q{display:flex;justify-content:space-between;align-items:center;
   padding:26px 0;cursor:pointer;gap:20px;}
-.faq-q-text{font-family:'Playfair Display',serif;font-size:18px;
-  font-weight:700;color:var(--forest);line-height:1.4;}
+.faq-q-text{font-size:18px;font-weight:700;color:var(--forest);line-height:1.45;}
 .faq-icon{width:30px;height:30px;flex-shrink:0;border:1px solid var(--cream-dark);
   border-radius:50%;display:flex;align-items:center;justify-content:center;
   color:var(--terra);font-size:1.1rem;transition:transform 0.35s,background 0.3s;}
 .faq-item.open .faq-icon{transform:rotate(45deg);background:var(--terra);
   color:#fff;border-color:var(--terra);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.45s ease;}
-.faq-a-inner{font-size:18px;color:var(--ink-soft);line-height:2;
-  font-weight:300;padding-bottom:26px;}
-.faq-item.open .faq-a{max-height:300px;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.5s ease;}
+.faq-a-inner{font-size:18px;color:var(--ink-soft);line-height:2;font-weight:300;padding-bottom:26px;}
+.faq-item.open .faq-a{max-height:400px;}
 
-/* CTA */
+/* ── CTA ── */
 #cta{background:var(--cream);position:relative;overflow:hidden;
   text-align:center;padding:120px 60px;}
 #cta::before{content:'';position:absolute;top:50%;left:50%;
   transform:translate(-50%,-50%);width:600px;height:600px;
-  background:radial-gradient(circle,rgba(184,115,58,0.07) 0%,transparent 70%);
-  pointer-events:none;}
+  background:radial-gradient(circle,rgba(184,115,58,0.07) 0%,transparent 70%);pointer-events:none;}
 .cta-title{font-family:'Playfair Display',serif;
   font-size:clamp(2rem,4vw,3.2rem);color:var(--forest);
   font-weight:700;line-height:1.3;margin-bottom:24px;}
 .cta-title .accent{color:var(--terra);}
 .cta-sub{font-size:18px;color:var(--ink-soft);line-height:2;
-  font-weight:300;max-width:560px;margin:0 auto 48px;}
+  font-weight:300;max-width:580px;margin:0 auto 48px;}
 .cta-sub strong{color:var(--forest);font-weight:600;}
 .cta-micro{margin-top:20px;font-size:15px;color:var(--sage);letter-spacing:0.05em;}
 .cta-micro::before{content:'✦ ';}
 
-/* FOOTER */
+/* ── FOOTER ── */
 footer{background:var(--forest);padding:60px;}
 .footer-inner{max-width:1100px;margin:0 auto;display:flex;
   justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.4rem;
-  font-weight:700;color:var(--cream);}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--cream);}
 .footer-logo span{color:var(--gold);}
 .footer-links{display:flex;gap:28px;list-style:none;align-items:center;}
 .footer-links a{font-size:15px;color:rgba(248,242,233,0.5);
@@ -350,7 +318,7 @@ footer{background:var(--forest);padding:60px;}
 .footer-links a:hover{color:var(--gold);}
 .footer-copy{font-size:15px;color:rgba(248,242,233,0.4);}
 
-/* MODAL */
+/* ── MODAL ── */
 .modal-overlay{position:fixed;inset:0;z-index:1000;
   background:rgba(26,18,12,0.76);backdrop-filter:blur(6px);
   display:flex;align-items:center;justify-content:center;
@@ -365,8 +333,7 @@ footer{background:var(--forest);padding:60px;}
   background:linear-gradient(to right,var(--terra),var(--gold),var(--sage));}
 .modal-header{display:flex;justify-content:space-between;align-items:center;
   padding:22px 30px;background:var(--forest);flex-shrink:0;}
-.modal-title{font-family:'Playfair Display',serif;font-size:1.15rem;
-  color:var(--cream);font-weight:700;}
+.modal-title{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);font-weight:700;}
 .modal-sub{font-size:15px;color:rgba(248,242,233,0.55);margin-top:3px;}
 .modal-close{width:34px;height:34px;border-radius:50%;
   border:1px solid rgba(255,255,255,0.2);background:transparent;color:var(--cream);
@@ -376,7 +343,7 @@ footer{background:var(--forest);padding:60px;}
 .modal-body{flex:1;overflow-y:auto;display:flex;flex-direction:column;}
 .modal-body iframe{width:100%;flex:1;border:none;min-height:520px;}
 
-/* RESPONSIVE */
+/* ── RESPONSIVE ── */
 @media(max-width:900px){
   body{font-size:16px;}
   nav{padding:18px 20px;}
@@ -384,42 +351,34 @@ footer{background:var(--forest);padding:60px;}
   .nav-links{display:none;}
   .nav-links.open{display:flex;flex-direction:column;position:fixed;
     top:0;left:0;right:0;background:var(--paper);
-    padding:80px 36px 40px;gap:24px;
-    box-shadow:0 8px 30px var(--shadow);z-index:199;}
+    padding:80px 36px 40px;gap:24px;box-shadow:0 8px 30px var(--shadow);z-index:199;}
   .nav-links.open a{color:var(--ink-soft)!important;font-size:18px;}
   .hamburger{display:flex;}
   section{padding:72px 22px;}
   #testimonial,#cta{padding:72px 22px;}
+  #disclaimer{padding:40px 22px;}
   footer{padding:40px 22px;}
   .hero-content{padding:0 22px;max-width:100%;}
-  .hero-sub,.btn-primary,.pain-desc,.about-bio,.about-quote p,
-  .plan-features li,.del-text-desc,.faq-a-inner,.section-sub,.cta-sub{font-size:16px;}
-  .hero-bg-photo::after{background:rgba(22,38,29,0.78);}
+  .hero-h1{font-size:clamp(1.8rem,6vw,2.4rem);}
+  .hero-bg-photo::after{background:rgba(22,38,29,0.82);}
   .hero-stats{gap:20px;}
   .hero-deco{display:none;}
   .pain-grid{grid-template-columns:1fr;}
   .pain-card{padding:36px 26px;}
-  .pain-desc{font-size:16px;}
   .books-label{padding:0 22px;}
   .book-card{width:140px;}
   .about-grid{grid-template-columns:1fr;gap:44px;}
   .plans-grid{grid-template-columns:1fr;}
-  .plan-card.featured{transform:none;}
-  .plan-card.featured:hover{transform:translateY(-8px);}
-  .del-inner{grid-template-columns:1fr;}
-  .faq-q-text{font-size:16px;}
-  .faq-a-inner{font-size:16px;}
   .footer-inner{flex-direction:column;text-align:center;}
   .footer-links{flex-wrap:wrap;justify-content:center;}
   .modal-box{width:96%;max-height:92vh;}
+  .faq-inner{max-width:100%;}
 }
 @media(max-width:480px){
   body{font-size:15px;}
-  .hero-sub,.pain-desc,.about-bio,.plan-features li,
-  .del-text-desc,.faq-a-inner,.section-sub,.cta-sub{font-size:15px;}
   .book-card{width:118px;}
   .marquee-track{gap:18px;}
-  .btn-plan{font-size:16px;}
+  .plan-card{padding:36px 24px;}
 }
 </style>
 </head>
@@ -431,7 +390,7 @@ footer{background:var(--forest);padding:60px;}
     <div class="modal-top-bar"></div>
     <div class="modal-header">
       <div>
-        <div class="modal-title">預約作品初步診斷</div>
+        <div class="modal-title">預約作品診斷</div>
         <div class="modal-sub">由 Iris 親自於 48 小時內回覆您的評估結果</div>
       </div>
       <button class="modal-close" onclick="closeModal()" aria-label="關閉">✕</button>
@@ -460,26 +419,26 @@ footer{background:var(--forest);padding:60px;}
   </button>
 </nav>
 
-<!-- HERO — 海景全幅大圖 -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-bg-photo">
-    <img src="S__63651845_0.jpg" alt="海景旅途" loading="eager" id="heroBgImg">
+    <img src="釜山.jpg" alt="海景旅途" loading="eager" id="heroBgImg">
   </div>
   <div class="hero-deco"></div>
   <div class="hero-content">
     <div class="hero-tag">旅圖企劃 Travel Map Project</div>
     <h1 class="hero-h1">
-      不是每一趟旅行都能成書，<br>
-      但每一位旅者<br>
-      <span class="accent">都值得擁有一位主編</span>
+      對接出版視野<span class="hero-colon">：</span><br>
+      讓你的旅行文字，<br>
+      <span class="accent">化為個人代表作</span>
     </h1>
     <p class="hero-sub">
-      別讓閃耀的旅遊瞬間，只停留在被遺忘的硬碟裡。<br>
-      由 <strong>7 年資深旅遊叢書主編 Iris</strong> 親自協作，<br>
+      別讓閃耀的旅遊瞬間，只停留在被遺忘的硬碟或部落格裡。<br>
+      由 <strong>7 年資深主編 Iris</strong> 親自協作，<br>
       為你的文字注入「出版魂」，開啟你的作家之路。
     </p>
     <button class="btn-primary" onclick="openModal()">
-      預約作品初步診斷 <span class="arrow">→</span>
+      預約作品診斷 <span class="arrow">→</span>
     </button>
     <div class="hero-stats">
       <div><div class="stat-num">20+</div><div class="stat-label">主編旅遊書</div></div>
@@ -501,24 +460,28 @@ footer{background:var(--forest);padding:60px;}
       </div>
       <div class="pain-grid">
         <div class="pain-card reveal">
-          <div class="pain-num">01</div><div class="pain-icon">📖</div>
-          <div class="pain-title">文字碎片化</div>
-          <p class="pain-desc">有幾萬字的遊記與美照，卻拼湊不出一本「書」的邏輯？素材堆在硬碟，遲遲無法成形。</p>
+          <div class="pain-num">01</div>
+          <div class="pain-icon">📖</div>
+          <div class="pain-title"><span class="kw">文字碎片化</span></div>
+          <p class="pain-desc">有幾萬字的遊記與美照，卻拼湊不出一本「書」的架構？整理半天也理不出頭緒。</p>
         </div>
         <div class="pain-card reveal" style="transition-delay:0.1s">
-          <div class="pain-num">02</div><div class="pain-icon">✉️</div>
-          <div class="pain-title">投稿無回音</div>
-          <p class="pain-desc">寄給出版社的提案石沉大海，不知道問題出在哪？缺乏的不是故事，而是出版端的語言。</p>
+          <div class="pain-num">02</div>
+          <div class="pain-icon">✉️</div>
+          <div class="pain-title"><span class="kw">投稿無回音</span></div>
+          <p class="pain-desc">寄給出版社的提案石沉大海，不知道問題出在哪？退稿也無法獲得實質建議？</p>
         </div>
         <div class="pain-card reveal" style="transition-delay:0.15s">
-          <div class="pain-num">03</div><div class="pain-icon">🗺️</div>
-          <div class="pain-title">市場方向迷失</div>
-          <p class="pain-desc">想出書，卻不知道讀者要什麼、市場缺什麼？方向不明確，寫再多也只是自說自話。</p>
+          <div class="pain-num">03</div>
+          <div class="pain-icon">🗺️</div>
+          <div class="pain-title"><span class="kw">市場迷失</span></div>
+          <p class="pain-desc">想出旅遊書，卻不知道讀者要什麼、市場缺什麼、自己的賣點是什麼？</p>
         </div>
         <div class="pain-card reveal" style="transition-delay:0.2s">
-          <div class="pain-num">04</div><div class="pain-icon">🔄</div>
-          <div class="pain-title">無效反覆修改</div>
-          <p class="pain-desc">你自己改了十遍，出版社還是看不懂。那是因為你缺的不是文字功力，而是出版邏輯。</p>
+          <div class="pain-num">04</div>
+          <div class="pain-icon">🔄</div>
+          <div class="pain-title"><span class="kw">無效勞動</span></div>
+          <p class="pain-desc">稿子修了幾十遍出版社還是看不懂？除了精進文筆，你更需要一套具備市場穿透力的「出版思維」。</p>
         </div>
       </div>
     </div>
@@ -534,27 +497,25 @@ footer{background:var(--forest);padding:60px;}
   <div class="marquee-wrapper">
     <div class="marquee-track">
       <!-- Set A -->
-      <div class="book-card"><img class="book-cover" src="南九州質感漫旅.jpg" alt="南九州質感漫旅"><div class="book-card-label">南九州質感漫旅</div></div>
-      <div class="book-card"><img class="book-cover" src="柏林.jpg" alt="柏林"><div class="book-card-label">柏林 Berlin</div></div>
-      <div class="book-card"><img class="book-cover" src="開始在冰島自助旅行.jpg" alt="開始在冰島自助旅行"><div class="book-card-label">開始在冰島自助旅行</div></div>
-      <div class="book-card"><img class="book-cover" src="開始在印度自助旅行.jpg" alt="開始在印度自助旅行"><div class="book-card-label">開始在印度自助旅行</div></div>
-      <div class="book-card"><img class="book-cover" src="嗯哼這才是越南.jpg" alt="嗯哼這才是越南"><div class="book-card-label">嗯哼，這才是越南</div></div>
-      <div class="book-card"><img class="book-cover" src="搭地鐵玩遍巴黎.jpg" alt="搭地鐵玩遍巴黎"><div class="book-card-label">搭地鐵玩遍巴黎</div></div>
-      <div class="book-card"><img class="book-cover" src="打卡洛杉磯.jpg" alt="打卡洛杉磯"><div class="book-card-label">打卡洛杉磯</div></div>
-      <div class="book-card"><img class="book-cover" src="希臘雅典愛情海跳島之旅.jpg" alt="希臘雅典愛情海跳島之旅"><div class="book-card-label">希臘雅典‧愛琴海跳島</div></div>
-      <div class="book-card"><img class="book-cover" src="東京食器_料理_好店手帖.jpg" alt="東京食器料理好店手帖"><div class="book-card-label">東京食器‧料理‧好店手帖</div></div>
-      <div class="book-card"><img class="book-cover" src="東京櫻花自由行.jpg" alt="東京櫻花自由行"><div class="book-card-label">東京櫻花自由行</div></div>
+      <div class="book-card"><img class="book-cover" src="南九州質感漫旅.png" alt="南九州質感漫旅"><div class="book-card-label">南九州質感漫旅</div></div>
+      <div class="book-card"><img class="book-cover" src="柏林.png" alt="柏林"><div class="book-card-label">柏林 Berlin</div></div>
+      <div class="book-card"><img class="book-cover" src="開始在冰島自助旅行.png" alt="開始在冰島自助旅行"><div class="book-card-label">開始在冰島自助旅行</div></div>
+      <div class="book-card"><img class="book-cover" src="嗯哼這才是越南.png" alt="嗯哼這才是越南"><div class="book-card-label">嗯哼，這才是越南</div></div>
+      <div class="book-card"><img class="book-cover" src="搭地鐵玩遍巴黎.png" alt="搭地鐵玩遍巴黎"><div class="book-card-label">搭地鐵玩遍巴黎</div></div>
+      <div class="book-card"><img class="book-cover" src="打卡洛杉磯.png" alt="打卡洛杉磯"><div class="book-card-label">打卡洛杉磯</div></div>
+      <div class="book-card"><img class="book-cover" src="希臘雅典愛情海跳島之旅.png" alt="希臘雅典愛情海跳島之旅"><div class="book-card-label">希臘雅典‧愛琴海跳島</div></div>
+      <div class="book-card"><img class="book-cover" src="東京食器_料理_好店手帖.png" alt="東京食器料理好店手帖"><div class="book-card-label">東京食器‧料理‧好店手帖</div></div>
+      <div class="book-card"><img class="book-cover" src="東京櫻花自由行.png" alt="東京櫻花自由行"><div class="book-card-label">東京櫻花自由行</div></div>
       <!-- Set B — duplicate for seamless loop -->
-      <div class="book-card"><img class="book-cover" src="南九州質感漫旅.jpg" alt="南九州質感漫旅"><div class="book-card-label">南九州質感漫旅</div></div>
-      <div class="book-card"><img class="book-cover" src="柏林.jpg" alt="柏林"><div class="book-card-label">柏林 Berlin</div></div>
-      <div class="book-card"><img class="book-cover" src="開始在冰島自助旅行.jpg" alt="開始在冰島自助旅行"><div class="book-card-label">開始在冰島自助旅行</div></div>
-      <div class="book-card"><img class="book-cover" src="開始在印度自助旅行.jpg" alt="開始在印度自助旅行"><div class="book-card-label">開始在印度自助旅行</div></div>
-      <div class="book-card"><img class="book-cover" src="嗯哼這才是越南.jpg" alt="嗯哼這才是越南"><div class="book-card-label">嗯哼，這才是越南</div></div>
-      <div class="book-card"><img class="book-cover" src="搭地鐵玩遍巴黎.jpg" alt="搭地鐵玩遍巴黎"><div class="book-card-label">搭地鐵玩遍巴黎</div></div>
-      <div class="book-card"><img class="book-cover" src="打卡洛杉磯.jpg" alt="打卡洛杉磯"><div class="book-card-label">打卡洛杉磯</div></div>
-      <div class="book-card"><img class="book-cover" src="希臘雅典愛情海跳島之旅.jpg" alt="希臘雅典愛情海跳島之旅"><div class="book-card-label">希臘雅典‧愛琴海跳島</div></div>
-      <div class="book-card"><img class="book-cover" src="東京食器_料理_好店手帖.jpg" alt="東京食器料理好店手帖"><div class="book-card-label">東京食器‧料理‧好店手帖</div></div>
-      <div class="book-card"><img class="book-cover" src="東京櫻花自由行.jpg" alt="東京櫻花自由行"><div class="book-card-label">東京櫻花自由行</div></div>
+      <div class="book-card"><img class="book-cover" src="南九州質感漫旅.png" alt="南九州質感漫旅"><div class="book-card-label">南九州質感漫旅</div></div>
+      <div class="book-card"><img class="book-cover" src="柏林.png" alt="柏林"><div class="book-card-label">柏林 Berlin</div></div>
+      <div class="book-card"><img class="book-cover" src="開始在冰島自助旅行.png" alt="開始在冰島自助旅行"><div class="book-card-label">開始在冰島自助旅行</div></div>
+      <div class="book-card"><img class="book-cover" src="嗯哼這才是越南.png" alt="嗯哼這才是越南"><div class="book-card-label">嗯哼，這才是越南</div></div>
+      <div class="book-card"><img class="book-cover" src="搭地鐵玩遍巴黎.png" alt="搭地鐵玩遍巴黎"><div class="book-card-label">搭地鐵玩遍巴黎</div></div>
+      <div class="book-card"><img class="book-cover" src="打卡洛杉磯.png" alt="打卡洛杉磯"><div class="book-card-label">打卡洛杉磯</div></div>
+      <div class="book-card"><img class="book-cover" src="希臘雅典愛情海跳島之旅.png" alt="希臘雅典愛情海跳島之旅"><div class="book-card-label">希臘雅典‧愛琴海跳島</div></div>
+      <div class="book-card"><img class="book-cover" src="東京食器_料理_好店手帖.png" alt="東京食器料理好店手帖"><div class="book-card-label">東京食器‧料理‧好店手帖</div></div>
+      <div class="book-card"><img class="book-cover" src="東京櫻花自由行.png" alt="東京櫻花自由行"><div class="book-card-label">東京櫻花自由行</div></div>
     </div>
   </div>
 </section>
@@ -567,7 +528,7 @@ footer{background:var(--forest);padding:60px;}
     <div class="about-grid">
       <div class="about-photo-wrap reveal">
         <div class="photo-frame">
-          <img src="S__63651843_0.jpg" alt="Iris — 旅遊叢書主編">
+          <img src="Gemini_Generated_Image_r4mzler4mzler4mz.png" alt="Iris — 旅遊叢書主編">
           <div class="photo-caption">Iris</div>
         </div>
         <div class="photo-badge">
@@ -575,14 +536,21 @@ footer{background:var(--forest);padding:60px;}
           <span class="badge-label">年主編資歷</span>
         </div>
       </div>
-      <div class="about-content reveal" style="transition-delay:0.15s">
+      <div class="about-content reveal" style="transition-delay:0.12s">
         <div class="section-label">關於我</div>
         <h2 class="section-title">我是 <span class="accent">Iris</span>，<br>你的私人出版主編。</h2>
-        <p class="about-bio">在出版界擔任旅遊叢書主編的 <strong>7 年間</strong>，我主編超過 <strong>20 本旅遊書</strong>，開發與審閱逾 30 位素人作家，累積編輯超過 80 本作品，並親手推動多本暢銷書的誕生。<br><br>我深知出版社真正的期待，也理解讀者最容易被什麼樣的內容打動。</p>
+        <p class="about-bio">畢業於臺北市立大學，我在進入出版業的第一天起，便專注於讓還沒成為作家的人，<strong>寫出值得被出版的作品</strong>。</p>
+        <p class="about-bio" style="margin-top:0;">過去 7 年，我擔任旅遊叢書主編，<strong>主編超過 20 本旅遊書</strong>，參與編輯逾 80 本作品，並開發與陪伴 30 位以上素人作者，從零開始，完成一本本能被市場驗證的書籍。其中，多本作品成功成為暢銷書。</p>
+        <ul class="about-exp-list">
+          <li>曾任職於凱信出版、太雅出版</li>
+          <li>曾任內容平台方格子（Vocus）編輯</li>
+          <li>現為數位內容專案經理，長期橫跨出版與數位內容領域</li>
+        </ul>
+        <p class="about-bio">我不只是編輯，更是站在「出版方」與「讀者」之間的轉譯者。我清楚出版社在找什麼，也理解讀者會被什麼打動。</p>
+        <p class="about-bio" style="margin-top:0;margin-bottom:0;">我相信好的內容不只是被寫出來，也需要被研磨打造。</p>
         <div class="about-quote">
-          <p>「我不只是在修改你的錯字，我是在用出版商的眼光，解構你的經歷——幫你從海量素材中，提取出那道能閃耀市場的光。」</p>
+          <p>「每一位優秀的作家背後，都有一位能看見他靈魂的主編。而我，就是為你圓夢的那個人。」</p>
         </div>
-        <p class="about-bio" style="margin-top:0;">每一位優秀的作家背後，都有一位能看見他靈魂的主編。<br>而我，就是為你 <strong>圓夢的那個人</strong>。</p>
         <span class="about-sig">Iris</span>
         <div class="about-metrics">
           <div><div class="metric-num">20+</div><div class="metric-label">旅遊書主編</div></div>
@@ -603,103 +571,72 @@ footer{background:var(--forest);padding:60px;}
       <p class="section-sub">選擇最適合你現在階段的方案，每一步都是通往出版的紮實基礎。</p>
     </div>
     <div class="plans-grid">
+
+      <!-- Plan A -->
       <div class="plan-card reveal">
         <div class="plan-letter">方案 A</div>
-        <div class="plan-name">作品潛力分析</div>
-        <div class="plan-desc">適合想測試市場水溫的你</div>
-        <div class="plan-divider"></div>
+        <div class="plan-name">潛力審核</div>
+        <div class="plan-hook">「在動筆之前，先找準你的市場坐標。」</div>
+        <div class="plan-tagline">適合擁有豐富素材，但需要專業視角來確認「作品商業價值」的創作者。</div>
+        <p class="plan-intro">素人最常遇到的問題不是沒內容，而是內容「沒重點」。我會以 7 年主編的市場嗅覺，幫你從紛亂的部落格或硬碟碎片中，精煉出具備出版潛力的核心賣點。</p>
+        <div class="plan-kv-title">核心價值</div>
         <ul class="plan-features">
-          <li><span class="check">✦</span><span>市場競爭力 SWOT 分析</span></li>
-          <li><span class="check">✦</span><span>核心亮點（USP）提取</span></li>
-          <li><span class="check">✦</span><span>目標讀者精準定位</span></li>
-          <li><span class="check">✦</span><span>書面分析報告一份</span></li>
+          <li>
+            <span class="check">✦</span>
+            <span><span class="feat-title">多維度檢核：</span>不只看文字，更從社群（Blog、YT 或任何 SNS 擇其一）與內容數據中找尋讀者共鳴點。</span>
+          </li>
+          <li>
+            <span class="check">✦</span>
+            <span><span class="feat-title">戰略報告：</span>50 分鐘線上精準諮詢，搭配一份具備「出版商視角」的 SWOT 競爭力分析。</span>
+          </li>
         </ul>
-        <div class="plan-price"><span class="price-amount">5,500</span><span class="price-unit">TWD</span></div>
+        <div class="plan-price">
+          <span class="price-amount">8,500</span><span class="price-unit">TWD</span>
+        </div>
         <button class="btn-plan" onclick="openModal()">立即諮詢 →</button>
       </div>
-      <div class="plan-card featured reveal" style="transition-delay:0.1s">
+
+      <!-- Plan B -->
+      <div class="plan-card featured reveal" style="transition-delay:0.12s">
         <div class="plan-badge">推薦方案</div>
         <div class="plan-letter">方案 B</div>
-        <div class="plan-name">出版企劃優化</div>
-        <div class="plan-desc">適合準備投稿或自費出版的你</div>
-        <div class="plan-divider"></div>
+        <div class="plan-name">出版實戰</div>
+        <div class="plan-hook">「將你的文字碎片，打造成出版社搶著要的專業提案。」</div>
+        <div class="plan-tagline">適合已準備好進入出版賽道，需要「即戰力規格」與「精準引薦」的創作者。</div>
+        <p class="plan-intro">方案 B 是 A 的全面進化版。我會親自介入你的書籍架構，用專業的「出版邏輯」重組目錄，並針對關鍵章節進行深度潤稿，讓你的文字具備商品化的質感。</p>
+        <div class="plan-kv-title">核心價值（含方案 A 全部內容，加上）</div>
         <ul class="plan-features">
-          <li><span class="check">✦</span><span>含方案 A 全部內容</span></li>
-          <li><span class="check">✦</span><span>全書目錄結構邏輯優化</span></li>
-          <li><span class="check">✦</span><span>試讀章節深度潤稿（3000字）</span></li>
-          <li><span class="check">✦</span><span>專業出版社投稿計畫書</span></li>
+          <li>
+            <span class="check">✦</span>
+            <span><span class="feat-title">結構邏輯優化：</span>解決「文字碎片化」的痛點，建立具備閱讀節奏感的全書架構。</span>
+          </li>
+          <li>
+            <span class="check">✦</span>
+            <span><span class="feat-title">主編親筆潤色：</span>3,000 字深度潤稿，讓出版社在試讀第一眼就感受到作家的氣場。</span>
+          </li>
+          <li>
+            <span class="check">✦</span>
+            <span><span class="feat-title">資源對接通路：</span>憑藉 7 年業界人脈，直接為你對接最合適的旅遊書出版社，跳過石沉大海的盲目投稿。</span>
+          </li>
         </ul>
-        <div class="plan-price"><span class="price-amount">8,500</span><span class="price-unit">TWD</span></div>
+        <div class="plan-price">
+          <span class="price-amount">18,800</span><span class="price-unit">TWD</span>
+        </div>
         <button class="btn-plan btn-plan-primary" onclick="openModal()">立即諮詢 →</button>
       </div>
-      <div class="plan-card reveal" style="transition-delay:0.2s">
-        <div class="plan-letter">方案 C</div>
-        <div class="plan-name">一對一主編陪跑</div>
-        <div class="plan-desc">適合追求卓越、建立個人品牌的你</div>
-        <div class="plan-divider"></div>
-        <ul class="plan-features">
-          <li><span class="check">✦</span><span>為期 3–6 個月深度指導</span></li>
-          <li><span class="check">✦</span><span>每月定期視訊顧問會議</span></li>
-          <li><span class="check">✦</span><span>對接合適出版社 / 自費資源</span></li>
-          <li><span class="check">✦</span><span>全方位風格定調與監製</span></li>
-        </ul>
-        <div class="plan-price"><span class="price-amount">20,000</span><span class="price-unit">TWD 起</span></div>
-        <button class="btn-plan" onclick="openModal()">立即諮詢 →</button>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- DELIVERABLE -->
-<section id="deliverable">
-  <div class="inner">
-    <div class="del-inner">
-      <div class="reveal">
-        <div class="report-mock">
-          <div class="report-header">
-            <div>
-              <div class="report-doc-title">作品出版潛力分析報告</div>
-              <div class="report-subtitle">PUBLISHING READINESS ANALYSIS</div>
-            </div>
-            <div class="report-logo">Iris</div>
-          </div>
-          <div class="report-bar"></div>
-          <div class="report-section">
-            <div class="report-section-title">市場定位分析</div>
-            <div class="report-chart">
-              <div class="chart-bar"></div><div class="chart-bar"></div>
-              <div class="chart-bar"></div><div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-            </div>
-          </div>
-          <div class="report-section">
-            <div class="report-section-title">讀者畫像標籤</div>
-            <div class="report-tags">
-              <span class="report-tag">25–40 歲女性</span>
-              <span class="report-tag">親子旅行</span>
-              <span class="report-tag">深度文化</span>
-              <span class="report-tag report-blurred">██████</span>
-            </div>
-          </div>
-          <div class="report-section report-blurred">
-            <div class="report-section-title">章節架構建議</div>
-            <div style="height:48px;background:var(--cream-dark);border-radius:2px;"></div>
-          </div>
-          <div class="report-seal">Iris</div>
-        </div>
-      </div>
-      <div class="reveal" style="transition-delay:0.15s">
-        <div class="section-label">核心產品</div>
-        <h2 class="section-title">這不只是建議，<br>這是一份 <span class="accent">「出版說明書」</span></h2>
-        <p class="section-sub" style="margin-bottom:36px;">每一份報告都是量身定制的出版路徑圖，讓你清楚知道下一步該怎麼走。</p>
-        <ul class="del-features">
-          <li><div class="del-icon">🧭</div><div><div class="del-text-title">市場定位座標軸</div><p class="del-text-desc">在同類競品中找到你的獨特位置，避免同質化競爭。</p></div></li>
-          <li><div class="del-icon">👤</div><div><div class="del-text-title">讀者畫像深度分析</div><p class="del-text-desc">具體描繪你的理想讀者，讓每一字都寫給對的人。</p></div></li>
-          <li><div class="del-icon">📐</div><div><div class="del-text-title">章節權重分配建議</div><p class="del-text-desc">解構敘事邏輯，讓讀者從第一頁翻到最後一頁。</p></div></li>
-          <li><div class="del-icon">💡</div><div><div class="del-text-title">商業價值預估</div><p class="del-text-desc">以出版端視角評估作品的市場潛力與銷售機率。</p></div></li>
-        </ul>
-      </div>
-    </div>
+<!-- DISCLAIMER -->
+<section id="disclaimer">
+  <div class="disclaimer-inner reveal">
+    <div class="disclaimer-icon">⚖️</div>
+    <p class="disclaimer-text">
+      <strong>合作責任與免責條款</strong><br>
+      「旅途企劃」服務僅提供出版諮詢、內容優化與渠道引薦。服務範圍不包含保證出版社錄用、保證合約簽署或保證圖書出版。出版社之錄用決策屬其獨立自由，與本計畫之執行無關。
+    </p>
   </div>
 </section>
 
@@ -723,6 +660,15 @@ footer{background:var(--forest);padding:60px;}
         <h2 class="section-title">你的疑問，<span class="accent">我來解答</span></h2>
       </div>
       <div class="reveal" style="transition-delay:0.1s">
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">我的旅行地點很大眾（如日本、泰國），市場上書已經很多了，還有出版機會嗎？</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p class="faq-a-inner">旅遊書的核心不在於「去哪裡」，而在於「你是誰」以及「你提供了什麼視角」。大眾題材代表市場需求穩定，關鍵在於如何從中挖掘出獨特的切入點。我會協助你在平凡的足跡中提煉出不平凡的觀點，找到市場尚未被滿足的缺口。</p></div>
+        </div>
+
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)">
             <span class="faq-q-text">我沒有寫作經驗，也可以開始嗎？</span>
@@ -730,27 +676,55 @@ footer{background:var(--forest);padding:60px;}
           </div>
           <div class="faq-a"><p class="faq-a-inner">可以。這正是主編協作的核心價值。多數成功出版的作品，並不是從完整稿件開始，而是從「素材與故事」開始。我們的工作是幫助你把零散內容轉化為具有出版結構的作品，而不是要求你先成為作家。</p></div>
         </div>
+
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)">
             <span class="faq-q-text">這跟一般的潤稿或編輯服務有什麼不同？</span>
             <div class="faq-icon">+</div>
           </div>
-          <div class="faq-a"><p class="faq-a-inner">潤稿通常處理的是語句與文字流暢度，而主編協作處理的是「作品能否出版」。包括內容架構、敘事策略、讀者視角、市場定位與完整書籍邏輯。我關注的不是每一句話，而是這本書是否具備被市場閱讀與購買的能力。</p></div>
+          <div class="faq-a"><p class="faq-a-inner">潤稿通常處理的是語句與文字流暢度，而主編協作處理的是「作品能否出版」。包括內容架構、敘事策略、讀者視角、書市場定位與完整書籍邏輯。我關注的不是每一句話，而是這本書是否具備被市場閱讀與購買的能力。</p></div>
         </div>
+
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)">
             <span class="faq-q-text">你會保證一定可以出版嗎？</span>
             <div class="faq-icon">+</div>
           </div>
-          <div class="faq-a"><p class="faq-a-inner">出版本身涉及市場、出版社選題與時機，因此無法以「保證」形式承諾。但主編協作的價值，是以出版端的標準重構你的作品，大幅提升被出版社採用、進入通路與被市場接受的機率。</p></div>
+          <div class="faq-a"><p class="faq-a-inner">出版本身涉及市場、出版社選題與時機，因此無法以「保證」形式承諾。但 Iris 協作的價值，是以出版端的標準重構你的作品，大幅提升被出版社採用、進入通路與被市場接受的機率。</p></div>
         </div>
+
         <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)">
-            <span class="faq-q-text">這樣的協作會不會讓作品失去個人風格？</span>
+            <span class="faq-q-text">這樣的協作會不會讓作品失去原本的個人風格？</span>
             <div class="faq-icon">+</div>
           </div>
           <div class="faq-a"><p class="faq-a-inner">不會。主編的工作不是改寫你，而是「讓你的核心被看見」。我們會保留你的敘事氣質與觀點，只移除阻礙讀者理解的雜訊，讓風格更清晰，而不是被稀釋。</p></div>
         </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">對接出版社後，Iris 還會繼續參與後續的流程嗎？</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p class="faq-a-inner">方案 B 的服務在於完成「出版提案對接」。一旦出版社表現出興趣並進入簽約程序，通常會由出版社內部的責任編輯接手。但我在服務過程中賦予你的「出版邏輯」，會讓你具備與出版社對等溝通的能力，確保你的創作權益受到尊重。</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">我的故事內容與原創構想，在協作過程中會受到保護嗎？</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p class="faq-a-inner">專業道德是出版人的生命。作為 7 年資深主編，我對所有合作的作品均負有保密義務。所有的文字內容與獨特創意，其著作權完全歸屬於創作者本人，我的角色是你的顧問與助攻手，而非內容佔有者。</p></div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span class="faq-q-text">如果最後沒有出版社採用，這份優化過的內容還有其他用途嗎？</span>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-a"><p class="faq-a-inner">有的。經過專業主編優化過的內容，是你的「個人品牌資產」。它可以轉化為電子書、付費訂閱專欄，或作為你未來經營社群、開課、甚至與廠商合作時最強大的信任背書。你所學到的出版邏輯，將終身受用。</p></div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -761,7 +735,7 @@ footer{background:var(--forest);padding:60px;}
   <div class="inner">
     <div class="reveal" style="text-align:center;">
       <div class="section-label" style="justify-content:center;">現在，就是最好的時機</div>
-      <h2 class="cta-title">別讓你的故事，<br>只留在電腦或 Blog <span class="accent">裡</span></h2>
+      <h2 class="cta-title">別讓你的故事，<br>只留電腦或部落格<span class="accent">裡</span></h2>
       <p class="cta-sub">旅遊作家的身分，是給自己這輩子最棒的禮物。<br>現在，就讓這 <strong>7 年的主編經驗</strong>，成為你最強大的後盾。</p>
       <button class="btn-primary" onclick="openModal()" style="font-size:18px;padding:20px 44px;">
         點擊這裡，開啟你的作家夢想 <span class="arrow">→</span>
@@ -797,7 +771,7 @@ document.getElementById('navLinks').querySelectorAll('a').forEach(function(a){
 
 var observer=new IntersectionObserver(function(entries){
   entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible');});
-},{threshold:0.1});
+},{threshold:0.09});
 document.querySelectorAll('.reveal').forEach(function(el){observer.observe(el);});
 
 function toggleFaq(btn){
